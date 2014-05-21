@@ -1,0 +1,12 @@
+{
+    "name": "urlaubsbilder",
+    "version": "0.0.0",
+    "description": "",
+    "main": "app.js",
+    "dependencies": {
+        "underscore": "x.x",
+        "async": "x.x"
+    },
+    "author": "Philipp Waldhauer",
+    "license": "MIT"
+}
