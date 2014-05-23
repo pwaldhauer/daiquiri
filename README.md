@@ -1,8 +1,8 @@
 # $toolname
 
-Hi, $toolname is a tool to create [exposure.so](http://exposure.so)-like image gallerys as static files based on a configuration passed in as JSON file.
+Hi! $toolname is a tool to create [exposure.so](http://exposure.so)-like image galleries as static files based on a configuration passed in as a JSON file.
 
-When exposure.so launched somewhen last year I really liked the approach and interface, but I want more control over the layout and my files. Also I want to include the gallerys in my blog and I don't want to pay nine dollars a month to another service for hosting my image files.
+When exposure.so launched somewhen last year I really liked the approach and interface, but I want more control over the layout and my files. Also I want to include the galleries in my blog and I don't want to pay nine dollars a month to another service for hosting my image files.
 
 You can take a look at [an example in my blog](http://knuspermagier.de/galerie/helgoland).
 
@@ -21,9 +21,9 @@ You can take a look at [an example in my blog](http://knuspermagier.de/galerie/h
 ## What you can do
 
 - Test it!
-- Like it!
 - Star it!
-- Fork it and add cool new features!
+- Fork it!
+- Make it better!
 
 ## Installation
 
@@ -31,7 +31,7 @@ You can take a look at [an example in my blog](http://knuspermagier.de/galerie/h
 
 (Or clone this repo)
 
-Also you'll need graphicsmagick. (OS X: `brew install graphicsmagick`)
+Also you'll need [graphicsmagick](http://www.graphicsmagick.org/). (OS X: `brew install graphicsmagick`)
 
 ## Usage
 
@@ -79,7 +79,6 @@ The format of the JSON file is quite self-explanatory. Currently all fields you 
         "layout": {
             "big_width": 1024,
             "full_width": 1440,
-            "grid_columns": 3,
             "grid_spacing": 10
         }
     },
@@ -113,6 +112,8 @@ The format of the JSON file is quite self-explanatory. Currently all fields you 
 ````
 
 With `meta.output.template` you can specify the path to a template file if you don't want to use the default one. Please take a look at the shipped default template to learn how it needs to look. (It's using ejs as templating engine).
+
+The `meta.layout` fields are used to calculate the size of the fitting images for the grid. If you change the CSS (i.e. make the column wider) you may need to change this values.
 
 You can have as many sections and boxes as you want. Currently $toolname supports two types of boxes: `text` and `image`. The latter supports the sizes `grid`, which creates a grid-like structure based on how many images are provided, and `full`, which creates a full-size image with scales to the viewports width.
 
