@@ -1,6 +1,6 @@
-# $toolname
+# daiquiri
 
-Hi! $toolname is a tool to create [exposure.so](http://exposure.so)-like image galleries as static files based on a configuration passed in as a JSON file.
+Hi! daiquiri is a tool to create [exposure.so](http://exposure.so)-like image galleries as static files based on a configuration passed in as a JSON file.
 
 When exposure.so launched somewhen last year I really liked the approach and interface, but I want more control over the layout and my files. Also I want to include the galleries in my blog and I don't want to pay nine dollars a month to another service for hosting my image files.
 
@@ -9,8 +9,8 @@ You can take a look at [an example in my blog](http://knuspermagier.de/galerie/h
 ## Features
 
 - You provide a JSON file that describes the layout of your image gallery
-- $toolname creates a HTML file containing the necessary markup
-- $toolname automatically creates multiple versions of the used images (fitting sizes for the boxes in the grid, retina versions, low res versions for unveil.js)
+- daiquiri creates a HTML file containing the necessary markup
+- daiquiri automatically creates multiple versions of the used images (fitting sizes for the boxes in the grid, retina versions, low res versions for unveil.js)
 - The default templates comes with a [Flexbox](http://caniuse.com/#feat=flexbox) powered responsive layout, support for [unveil.js](https://github.com/luis-almeida/unveil) and a [nice Lightbox](http://dimsemenov.com/plugins/magnific-popup/) -- but it's easily customizable using CSS and stuff!
 
 ## Things not included
@@ -27,7 +27,7 @@ You can take a look at [an example in my blog](http://knuspermagier.de/galerie/h
 
 ## Installation
 
-`sudo npm install -g $toolname`
+`sudo npm install -g daiquiri`
 
 (Or clone this repo)
 
@@ -35,7 +35,7 @@ Also you'll need [graphicsmagick](http://www.graphicsmagick.org/). (OS X: `brew 
 
 ## Usage
 
-`$toolname [json file]`
+`daiquiri [json file]`
 
 Most of the configuration is embedded in the JSON file, but there are some command line arguments:
 
@@ -115,7 +115,7 @@ With `meta.output.template` you can specify the path to a template file if you d
 
 The `meta.layout` fields are used to calculate the size of the fitting images for the grid. If you change the CSS (i.e. make the column wider) you may need to change this values.
 
-You can have as many sections and boxes as you want. Currently $toolname supports two types of boxes: `text` and `image`. The latter supports the sizes `grid`, which creates a grid-like structure based on how many images are provided, and `full`, which creates a full-size image with scales to the viewports width.
+You can have as many sections and boxes as you want. Currently daiquiri supports two types of boxes: `text` and `image`. The latter supports the sizes `grid`, which creates a grid-like structure based on how many images are provided, and `full`, which creates a full-size image with scales to the viewports width.
 
 The path of the images is constructed using the `meta.input` fields and the string you define in the `media` arrays of the boxes. So `"media": ["1175"]` gets `meta.input.prefix` + 1175 + `meta.input.suffix` = `images/IMG_1175.jpg`. This is mainly to save you some time typing the whole filename everytime.
 
