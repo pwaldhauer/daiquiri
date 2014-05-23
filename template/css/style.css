@@ -1,0 +1,324 @@
+/** reset **/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Avenir Next', Helvetica, sans-serif;
+    height: 100%;
+}
+
+.gallery-wrapper section {
+    width: 100%;
+    margin: 250px 0;
+}
+
+.gallery-wrapper footer {
+    border-top: 1px rgba(0,0,0,0.3) solid;
+}
+
+.gallery-wrapper footer p {
+
+    max-width: 1024px;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 135%;
+    color: #999;
+
+    text-align: center;
+}
+
+.gallery-wrapper footer p a {
+    color: #0079a6;
+    text-decoration: none;
+}
+
+.gallery-wrapper footer p a:hover {
+    text-decoration: underline;
+}
+
+.gallery-wrapper a {
+    color: #0079a6;
+    text-decoration: none;
+}
+
+.gallery-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.gallery-wrapper img {
+    cursor: pointer
+}
+
+.gallery-wrapper section.header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    position: relative;
+    margin: 0;
+}
+
+.gallery-wrapper section.header .wrapper {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+
+}
+
+.gallery-wrapper section.header h1 {
+    color: #fff;
+    font-size: 82px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.gallery-wrapper section.header p {
+    color: #fff;
+    font-size: 38px;
+    line-height: 52px;
+    width: 100%;
+    text-align: center;
+    padding: 0 25%;
+}
+
+.gallery-wrapper section h2 {
+    max-width: 700px;
+    margin: 100px auto;
+    text-align: center;
+
+    font-size: 38px;
+    line-height: 100px;
+    border-bottom: 1px rgba(0,0,0,0.1) solid;
+    border-top: 1px rgba(0,0,0,0.1) solid;
+    border-radius: 0px;
+}
+
+.gallery-wrapper section .box {
+    max-width: 1024px;
+    margin: 50px auto;
+}
+
+
+.gallery-wrapper section .box-text {
+    max-width: 700px;
+    margin: 100px auto;
+}
+
+.gallery-wrapper section .box-text p {
+    font-size: 24px;
+    font-family: Georgia, serif;
+    line-height: 135%;
+    margin-bottom: 20px;
+}
+
+
+.gallery-wrapper section .box-image {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.gallery-wrapper section .box.box-image-full {
+    max-width: 100%;
+    width: 100%;
+}
+
+.gallery-wrapper section .box.box-image-full img {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.gallery-wrapper section .box img {
+    padding: 10px;
+    width: 100%;
+}
+
+.gallery-wrapper section .box.box-image-grid-2 img {
+    width: 50%;
+}
+
+.gallery-wrapper section .box.box-image-grid-full img {
+    width: 33.33333333%;
+}
+
+.gallery-wrapper section .box.box-image-grid-portrait {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.gallery-wrapper section .box.box-image-grid-portrait.box-image-grid-portrait-last {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.gallery-wrapper section .box.box-image-grid-portrait .box-image-landscape {
+    width: 50%;
+}
+
+.gallery-wrapper section .box.box-image-grid-portrait img {
+    width: 50%;
+}
+
+.gallery-wrapper section .box.box-image-grid-portrait .box-image-landscape img {
+    width: 100%;
+}
+
+@media (max-width: 450px) {
+    .gallery-wrapper section .box img, .gallery-wrapper section .box.box-image-grid-portrait .box-image-landscape {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .gallery-wrapper section .box-text p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

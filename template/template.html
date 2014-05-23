@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title><%= json.meta.title.headline %></title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="js/lightbox.css" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lightbox.js"></script>
+    <script type="text/javascript" src="js/unveil.js"></script>
+</head>
+<body class="lightbox gallery-wrapper">
+    <section class="header" style="background-image: url(<%= json.meta.title.background_image %>);">
+        <div class="wrapper">
+
+            <h1><%= json.meta.title.headline %></h1>
+            <p><%= json.meta.title.subtitle %></p>
+        </div>
+
+    </section>
+
+    <% json.sections.forEach(function(section) { %>
+        <section>
+            <h2><%= section.title %></h2>
+            <% section.boxes.forEach(function(box) { %>
+
+                <% if(box.type == 'image') { %>
+                    <div class="<%= box.box_classes %>">
+                        <% if(box.has_portrait) { %>
+                            <div class="box-image-landscape">
+                                <% box.landscape_images.forEach(function(image) { %>
+                                <img data-mfp-src="<%= image.big %>" src="<%= image.lowres %>" data-src="<%= image.fitting %>" data-src-retina="<%= image.fitting_retina %>">
+                                <% }) %>
+                            </div>
+                            <% box.portrait_images.forEach(function(image) { %>
+                                <img data-mfp-src="<%= image.big %>" src="<%= image.lowres %>" data-src="<%= image.fitting %>" data-src-retina="<%= image.fitting_retina %>">
+                            <% }) %>
+                        <% } else { %>
+                            <% box.images.forEach(function(image) { %>
+                                <img data-mfp-src="<%= image.big %>" src="<%= image.lowres %>" data-src="<%= image.fitting %>" data-src-retina="<%= image.fitting_retina %>">
+                            <% }) %>
+                        <% } %>
+                    </div>
+                <% } else if(box.type == 'text') { %>
+
+                    <div class="box box-text">
+                            <%- box.text_rendered %>
+                    </div>
+
+                <% } %>
+
+            <%  }) %>
+        </section>
+
+    <%  }) %>
+
+    <footer>
+
+        <p>'<%= json.meta.title.headline %>', eine Galerie von <a href="<%= json.meta.title.author.url %>"><%= json.meta.title.author.name %></a>. Erstellt mit <a href="http://blubb.io">Urlaubsbilder, LOL.io</a>.</p>
+
+    </footer>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('img').unveil();
+        $('.lightbox').magnificPopup({
+            delegate: 'img',
+            type: 'image',
+            tLoading: 'Lade Bild #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1],
+                tCounter: ''
+            },
+            retina: {
+                ratio: function() { return window.devicePixelRatio === 2 ? 2 : 1  },
+
+                replaceSrc: function(item, ratio) {
+                  return item.src.replace(/\.\w+$/, function(m) { return '@2x' + m; });
+                }
+              }
+        });
+    });
+
+    </script>
+
+</body>

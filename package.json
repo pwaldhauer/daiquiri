@@ -1,12 +1,26 @@
 {
-    "name": "urlaubsbilder",
-    "version": "0.0.0",
-    "description": "",
-    "main": "app.js",
-    "dependencies": {
-        "underscore": "x.x",
-        "async": "x.x"
+  "name": "urlaubsbilder",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+    "bin": {
+      "urlaubsbilder": "app.js"
     },
-    "author": "Philipp Waldhauer",
-    "license": "MIT"
+  "dependencies": {
+    "underscore": "x.x",
+    "async": "x.x",
+    "ejs": "^1.0.0",
+    "gm": "^1.16.0",
+    "imageinfo": "^1.0.4",
+    "markdown": "^0.5.0",
+    "image-optim": "^0.1.0",
+    "ncp": "^0.5.1",
+    "minimist": "^0.1.0"
+  },
+  "author": {
+    "name": "Philipp Waldhauer",
+    "email": "ich@philippwaldhauer.de",
+    "url": "http://knuspermagier.de"
+  },
+  "license": "MIT"
 }
