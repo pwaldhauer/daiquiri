@@ -6,6 +6,10 @@
     "bin": {
       "daiquiri": "app.js"
     },
+     "repository": {
+    "type": "git",
+    "url": "https://github.com/pwaldhauer/daiquiri.git"
+  },
   "dependencies": {
     "underscore": "x.x",
     "async": "x.x",
