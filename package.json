@@ -1,10 +1,10 @@
 {
-  "name": "urlaubsbilder",
-  "version": "0.0.0",
+  "name": "daiquiri",
+  "version": "1.0.0",
   "description": "",
   "main": "app.js",
     "bin": {
-      "urlaubsbilder": "app.js"
+      "daiquiri": "app.js"
     },
   "dependencies": {
     "underscore": "x.x",
