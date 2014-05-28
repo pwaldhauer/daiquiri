@@ -119,7 +119,7 @@ You can have as many sections and boxes as you want. Currently daiquiri supports
 
 The path of the images is constructed using the `meta.input` fields and the strings you define in the `media` arrays of the boxes. `"media": ["1175"]` becomes "`meta.input.prefix` + 1175 + `meta.input.suffix`" = `images/IMG_1175.jpg`, so you won't need to type the whole filename everytime.
 
-For a real-world example take a look at [this JSON-file](http://knuspermagier.de/galerie/helgoland) I used to create [the gallery in my blog](http://knuspermagier.de/galerie/helgoland).
+For a real-world example take a look at [this JSON file](https://s3-eu-west-1.amazonaws.com/knusperfiles/helgoland.json) I used to create [the gallery in my blog](http://knuspermagier.de/galerie/helgoland).
 
 ## License
 
