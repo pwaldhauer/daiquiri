@@ -15,7 +15,7 @@ You can take a look at [an example in my blog](http://knuspermagier.de/galerie/h
 
 ## Things not included
 
-- A super easy visual editor for the JSON file
+- A super easy visual editor for the JSON file, but you can use Photoshop and convert the psd with [daiquiri-psd](https://github.com/pwaldhauer/daiquiri-psd)
 - A super easy Wordpress plugin
 
 ## What you can do
