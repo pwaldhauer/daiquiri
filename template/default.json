@@ -1,0 +1,39 @@
+{
+    "meta": {
+        "title": {
+            "headline": "Your Headline",
+            "subtitle": "Your Subtitle",
+            "author": {
+                "name": "John Smith",
+                "url": "http://example.com"
+            },
+            "media": [
+                "title-image"
+            ]
+        },
+        "input": {
+            "prefix": "../path/to/files/IMG_",
+            "suffix": ".jpg"
+        },
+        "output": {
+            "template": "default",
+            "prefix": "prefix/",
+            "image_prefix": "images/",
+            "file": "index.html",
+            "url": "http://example.com/daiquiris/",
+            "quality_main": 87,
+            "quality_retina": 78,
+            "quality_lowres": 10
+        },
+        "layout": {
+            "big_width": 1024,
+            "full_width": 1400,
+            "grid_columns": 3,
+            "grid_spacing": 10,
+            "create_retina": true
+        }
+    },
+    "sections": [
+
+    ]
+}

@@ -43,6 +43,8 @@ Most of the configuration is embedded in the JSON file, but there are some comma
 - *--quiet*: Do not print anything to the console while processing
 - *--open*: Open the generated file in your browser automatically (Only works on Mac OS because it uses the `open` command, I guess.)
 
+You can use `daiquiri -c [json file]` to create a brand new and empty JSON file.
+
 ## The magical JSON file
 
 The format of the JSON file is quite self-explanatory. Currently all fields you see in the following example are mandatory.
