@@ -1,3 +1,5 @@
+# No longer maintained, sorry 😵
+
 # daiquiri
 
 Hi! daiquiri is a tool to create [exposure.so](http://exposure.so)-like image galleries as static files based on a configuration passed in as a JSON file.
