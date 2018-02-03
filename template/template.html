@@ -28,15 +28,15 @@
                         <% if(box.has_portrait) { %>
                             <div class="box-image-landscape">
                                 <% box.landscape_images.forEach(function(image) { %>
-                                <img data-mfp-src="<%= image.big %>" src="<%= image.lowres %>" data-src="<%= image.fitting %>" data-src-retina="<%= image.fitting_retina %>">
+                                <img data-responsive="<%= image.big_retina %> 10000" src="<%= image.lowres %>" data-src="<%= image.fitting %>" data-src-retina="<%= image.fitting_retina %>">
                                 <% }) %>
                             </div>
                             <% box.portrait_images.forEach(function(image) { %>
-                                <img data-mfp-src="<%= image.big %>" src="<%= image.lowres %>" data-src="<%= image.fitting %>" data-src-retina="<%= image.fitting_retina %>">
+                                <img data-responsive="<%= image.big_retina %> 10000" src="<%= image.lowres %>" data-src="<%= image.fitting %>" data-src-retina="<%= image.fitting_retina %>">
                             <% }) %>
                         <% } else { %>
                             <% box.images.forEach(function(image) { %>
-                                <img data-mfp-src="<%= image.big %>" src="<%= image.lowres %>" data-src="<%= image.fitting %>" data-src-retina="<%= image.fitting_retina %>">
+                                <img data-responsive="<%= image.big_retina %> 10000" src="<%= image.lowres %>" data-src="<%= image.fitting %>" data-src-retina="<%= image.fitting_retina %>">
                             <% }) %>
                         <% } %>
                     </div>
@@ -44,6 +44,15 @@
 
                     <div class="box box-text">
                             <%- box.text_rendered %>
+                    </div>
+                <% } else if(box.type == 'video') { %>
+
+                    <div class="<%= box.box_classes %>">
+                        <video poster="<%- box.poster_url %>" <% if(box.autoplay) { %>autoplay<%} %> <% if(box.loop) { %>loop<%} %>>
+                            <% box.sources.forEach(function(source) { %>
+                            <source src="<%- source.url %>" type="<%- source.type %>">
+                            <% }) %>
+                        </video>
                     </div>
 
                 <% } %>
